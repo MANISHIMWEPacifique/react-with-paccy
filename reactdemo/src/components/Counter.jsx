@@ -31,12 +31,12 @@ class Counter extends Component {
       <div>
         <span className={this.getBadge()}>{this.formatCount()}</span>
         <button
-        onClick={this.handlingIcreament()}
+        onClick={this.handlingIcreament}
           style={{ fontSize: 20 }}
           className="btn btn-secondary btn-sm">
           increament
         </button>
-        <ul>{this.state.tages.map(x=><li key={x}>{x}</li>)}</ul>
+        <ul>{this.state.tages.map(tag=><li key={tag}>{tag}</li>)}</ul>
       </div>
     );
   }
