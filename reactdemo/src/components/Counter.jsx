@@ -3,8 +3,8 @@ class Counter extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      count: 0,
-      tages:["tag1","tage2","tage3"]
+      count: this.props.value
+      
     };
   }
 
@@ -29,6 +29,7 @@ class Counter extends Component {
   render() {
     return (
       <div>
+       <h4>{this.props.id}</h4>
         <span className={this.getBadge()}>{this.formatCount()}</span>
         <button
         onClick={this.handlingIcreament}
@@ -36,7 +37,7 @@ class Counter extends Component {
           className="btn btn-secondary btn-sm">
           increament
         </button>
-        <ul>{this.state.tages.map(tag=><li key={tag}>{tag}</li>)}</ul>
+        
       </div>
     );
   }
